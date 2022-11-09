@@ -31,7 +31,7 @@ export default {
             form.is_purchased = form.is_purchased == '' ? 0 : 1
 
             if(form.is_purchased == ''){
-                form.purchased_by = 2
+                form.purchased_by = process.env.NOT_AVAILABLE
             }
 
             await storeItem({...form});
