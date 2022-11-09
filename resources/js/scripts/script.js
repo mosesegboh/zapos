@@ -27,7 +27,6 @@ export default {
         onMounted(getItems)
 
         const saveItem = async () => {
-            console.log(paginationMeta.value.current_page)
             form.is_purchased = form.is_purchased == '' ? 0 : 1
 
             if(form.is_purchased == ''){
