@@ -29,13 +29,13 @@ export default {
         const saveItem = async () => {
             form.is_purchased = form.is_purchased == '' ? 0 : 1
 
-            if(form.is_purchased == ''){
+            if (form.is_purchased == ''){
                 form.purchased_by = process.env.NOT_AVAILABLE
             }
 
             await storeItem({...form});
 
-            if(  response.value.status == 200 ) {
+            if (response.value.status == 200) {
                 $('#exampleModal').hide();
                 $('.modal-backdrop').hide();
             }
@@ -45,7 +45,7 @@ export default {
         const itemUpdate = async (id) => {
             await updateItem(id);
 
-            if(  updateResponse.value.status == 200 ) {
+            if (updateResponse.value.status == 200) {
                 $('#exampleModalEdit').hide();
                 $('.modal-backdrop').hide();
             }
