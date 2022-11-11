@@ -23,7 +23,6 @@ export default {
             'purchased_by': document.querySelector("meta[name='user-id']").getAttribute('content'),
         })
 
-
         onMounted(getItems)
 
         const saveItem = async () => {

@@ -27,7 +27,7 @@ class ItemController extends Controller
      */
     public function store(ItemRequest $request)
     {
-        $item = Item::create($request->validated());
+        Item::create($request->validated());
 
         return response()->json(['status'=>1, 'message'=>'item has been successfully created']);
     }

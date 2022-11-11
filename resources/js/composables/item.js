@@ -31,7 +31,7 @@ export default function useItems() {
 
     const updateItem = async (id) => {
         errors.value = ''
-        item.value.purchased_by = item.value.is_purchased == true ? document.querySelector("meta[name='user-id']").getAttribute('content') : process.env.NOT_AVAILABLE;
+        item.value.purchased_by = item.value.is_purchased == true ? document.querySelector("meta[name='user-id']").getAttribute('content') : 2;
         item.value.created_by = item.value.created_by.id;
         item.value.is_purchased = item.value.is_purchased == true ? 1 : 0;
         try {
